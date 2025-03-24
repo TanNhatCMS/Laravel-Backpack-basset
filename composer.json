@@ -1,5 +1,5 @@
 {
-    "name": "backpack/basset",
+    "name": "tannhatcms/basset",
     "description": "Dead-simple way to load CSS or JS assets only once per page, when using Laravel 10+.",
     "license": "MIT",
     "authors": [
@@ -32,6 +32,9 @@
         "pestphp/pest-plugin-laravel": "^1.4|^2.0|^3.1",
         "orchestra/testbench": "^7.22|^8.5|^10.0",
         "phpstan/phpstan": "^1.10|^2.1"
+    },
+    "replace": {
+        "backpack/basset": "^1.3.7"
     },
     "suggest": {
         "ext-zip": "Required to use @bassetArchive with .zip archives."
