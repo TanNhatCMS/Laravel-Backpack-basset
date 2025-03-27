@@ -75,8 +75,11 @@ class CacheMap
         if (! $this->isActive || ! ($this->map[$asset->getAssetName()] ?? false)) {
             return false;
         }
-
-        return CacheEntry::from($this->map[$asset->getAssetName()]);
+        $data = $this->map[$asset->getAssetName()] ?? null;
+        if (!is_array($data)) {
+            return false;
+        }
+        return CacheEntry::from($data);
     }
 
     public function delete(CacheEntry $asset): void
