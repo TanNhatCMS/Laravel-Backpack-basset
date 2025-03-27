@@ -96,7 +96,7 @@ class BassetCheck extends Command
         $this->basset = app('basset');
 
         // set a local file to run the tests
-        $this->filepath = base_path('vendor/backpack/basset/tests/Helpers/basset-test.js');
+        $this->filepath = base_path('vendor/tannhatcms/basset/tests/Helpers/basset-test.js');
 
         if (! File::exists($this->filepath)) {
             throw new Exception('Error accessing the filesystem, the check can not run.');
