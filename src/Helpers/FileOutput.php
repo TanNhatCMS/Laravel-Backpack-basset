@@ -8,7 +8,7 @@ use Illuminate\Support\Str;
 
 class FileOutput
 {
-    private string|null $nonce;
+    private ?string $nonce;
 
     private string $cachebusting;
 
@@ -71,7 +71,7 @@ class FileOutput
     {
         $dev = config('backpack.basset.dev_mode', false);
 
-        $asset = Str::of(asset($path.($dev ? '' : $this->cachebusting)));
+        $asset = Str::isUrl($path) ? Str::of(asset($path)) : Str::of(asset($path.($dev ? '' : $this->cachebusting)));
 
         if ($this->useRelativePaths && $asset->startsWith(url(''))) {
             $asset = $asset->after('//')->after('/')->start('/');
