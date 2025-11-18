@@ -34,7 +34,7 @@
         "phpstan/phpstan": "^1.10|^2.1"
     },
     "replace": {
-        "backpack/basset": "^1.3.7"
+        "backpack/basset": "^1.3.9"
     },
     "suggest": {
         "ext-zip": "Required to use @bassetArchive with .zip archives."
